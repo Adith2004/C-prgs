@@ -1,0 +1,26 @@
+// C program using Struct pointer
+
+#include<stdio.h>
+#include<string.h>
+
+struct student {
+	int roll;
+	float cgpa;
+	char name[100];
+};
+
+int main(){
+	struct student s1 = {1664, 9.2, "Ronaldo"};
+	
+	printf("Student name :%s\n", s1.name);
+	printf("Student cgpa :%f\n", s1.cgpa);
+	printf("Student Roll number :%d\n", s1.roll);
+	
+	struct student *ptr = &s1;
+		printf("Student Roll number :%d\n", (*ptr).roll);
+		printf("Student->Roll :%d\n", ptr->roll);
+		printf("Student->name :%s\n", ptr->name);
+		printf("Student->cgpa :%f\n", ptr->cgpa);
+	
+	return 0;	
+}
