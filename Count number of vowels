@@ -1,0 +1,23 @@
+// C program to count the number of vowels
+
+#include<stdio.h>
+#include<string.h>
+
+int vowelcount(char str[]);
+int main(){
+	char str[] = "HelloWorld";
+	printf("No. of Vowels are : %d", vowelcount(str));
+	return 0;
+}
+
+int vowelcount(char str[]){
+	int count = 0;
+	int i;
+	
+	for(i=0; str[i] != '\0'; i++){
+		if(str[i] == 'a'|| str[i] == 'e'|| str[i] == 'i'|| str[i] == 'o'|| str[i] == 'u'){
+			count++;
+		}
+	}
+	return count;
+}
